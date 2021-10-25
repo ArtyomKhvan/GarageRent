@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 class Car(models.Model):
@@ -40,3 +41,11 @@ class Review(models.Model):
 
     def __str__(self):
         return f"{self.car} - {self.author}"
+
+
+class Client(models.Model):
+    name = models.CharField(max_length=30, null=False, blank=False, verbose_name="Имя")
+    phone = PhoneNumberField(blank=True, verbose_name="Телефон")
+    email = models.EmailField(null=True, blank=True, verbose_name="Почта")
+    message = models.CharField(max_length=3000, null=False, blank=False, verbose_name="Сообщение")
+    created_at = models.DateTimeField(auto_now=True)
