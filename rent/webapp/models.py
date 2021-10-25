@@ -10,9 +10,15 @@ class Car(models.Model):
     platform = models.ForeignKey("webapp.Platform", on_delete=models.PROTECT, verbose_name="Платформа",
                                  related_name="cars")
 
+    def __str__(self):
+        return f"{self.model} - {self.fuel}"
+
 
 class Photo(models.Model):
     photo = models.ImageField(null=True, blank=True, upload_to="photos", verbose_name="Фотография")
+
+    def __str__(self):
+        return f"{self.pk}"
 
 
 class Platform(models.Model):
@@ -21,10 +27,16 @@ class Platform(models.Model):
     width = models.PositiveSmallIntegerField(blank=False, null=False, verbose_name="Ширина в см")
     height = models.PositiveSmallIntegerField(blank=False, null=False, verbose_name="Высота в см")
 
+    def __str__(self):
+        return f"{self.name}"
+
 
 class Review(models.Model):
-    car = models.ForeignKey("webapp.Car", on_delete=models.CASCADE, verbose_name="Отзыв", related_name="reviews")
+    car = models.ForeignKey("webapp.Car", on_delete=models.CASCADE, verbose_name="Марка", related_name="reviews")
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, verbose_name="Автор", related_name="reviews")
     text = models.TextField(max_length=500, verbose_name="Отзыв")
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.car} - {self.author}"
