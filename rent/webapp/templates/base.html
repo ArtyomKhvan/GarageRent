@@ -22,8 +22,8 @@
                 <div class="bg-dark p-4">
                     <div class="d-flex flex-column align-items-center">
                         <a class="text-light" href="{% url "webapp:about_us" %}">О компании</a>
-                        <a class="text-light" href="#">Наши услуги</a>
-                        <a class="text-light" href="#">Автопарк</a>
+                        <a class="text-light" href="http://localhost:8000/#our">Наши услуги</a>
+                        <a class="text-light" href="">Автопарк</a>
                         <a class="text-light" href="#">Контакты</a>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                             Меню
                         </button>
                       </div>
-                      <a class="navbar-brand" href="#">
+                      <a class="navbar-brand" href="{% url "webapp:index" %}">
                         <img src="/webapp/static/images/image.png" width="30" height="30"
                              class="d-inline-block align-top" alt="">
                         Garage Rent
@@ -55,7 +55,7 @@
 
     {% block carousel %}
     {% endblock %}
-    <div class="card">
+    <div class="card" id="our">
         {% block card %}
         {% endblock %}
     </div>
@@ -65,9 +65,9 @@
     </div>
     <footer class="bg-dark">
         {% block footer %}
-            <div class="d-flex text-light">
+            <div class="d-flex justify-content-between text-light ">
                 <p>© 2019-2021 Garage Rent</p>
-                <div class="link_net">
+                <div class="d-flex justify-content-between link_net footer_block">
                     <a href=""><i class="bi bi-instagram"></i></a>
                     <a href=""><i class="bi bi-telegram"></i></a>
                     <a href=""><i class="bi bi-whatsapp"></i></a>

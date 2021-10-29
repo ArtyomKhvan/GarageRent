@@ -56,3 +56,9 @@ footer{
 .bi{
     font-size: 2rem;
 }
+.footer_block{
+    width: 137px;
+}
+html{
+     scroll-behavior: smooth;
+}
