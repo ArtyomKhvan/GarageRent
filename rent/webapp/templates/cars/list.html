@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block carousel %}
+    <img src="https://грузотакси-газелька70.рф/wp-content/uploads/2020/11/4f08.jpg" class="d-block w-100"  alt="фото">
+{% endblock %}
+
+{% block content %}
+    <div>
+        {{ cars.photos.photo.all }}
+        {% for car in cars%}
+            {% for photo in car.photos.all %}
+                <img src="{{ photo }}" alt="">
+            {% endfor %}
+{#            {% for photo in  car.photos.photo.all %}#}
+{#                {{ photo }}#}
+{#                <img src="{{ photo.url }}" alt="">#}
+{#            {% endfor %}#}
+            <p>{{ car.volume }}</p>
+            <p>{{ car.fuel }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}
