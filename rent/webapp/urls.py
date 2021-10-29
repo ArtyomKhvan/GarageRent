@@ -5,4 +5,5 @@ app_name = "webapp"
 
 urlpatterns = [
     path('', general_view.IndexView.as_view(), name="index"),
+    path('about_us/', general_view.AboutUsView.as_view(), name="about_us")
 ]

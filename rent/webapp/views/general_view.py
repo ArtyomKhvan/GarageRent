@@ -8,3 +8,6 @@ class IndexView(View):
         return render(request, "general/index.html")
 
 
+class AboutUsView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "general/about_us.html")
