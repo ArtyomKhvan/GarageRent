@@ -1,0 +1,58 @@
+body{
+    background: lightcyan;
+    margin: 0 auto;
+}
+p{
+    font-size: 18px;
+}
+nav.navbar .dropdown:hover > .dropdown-menu {
+ display: block;
+}
+.menu_but{
+    width: 100px;
+}
+.content{
+    width: 1200px ;
+    margin: 0 auto;
+}
+.carousel-item,
+.carousel-inner,
+.carousel-inner img {
+  height: 100%;
+  width: auto;
+}
+.carousel-item {
+  text-align: center;
+}
+.carousel {
+    height: 500px;
+}
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.services{
+    height: 300px;
+}
+.bg{
+    background: rgb(219,219,219)
+}
+.collapse_advantages{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 50px 0;
+}
+.collapse_advantages h3{
+    color: #754C3A;
+}
+.title_advantages{
+    color: #754C3A;
+}
+footer{
+    padding: 40px;
+}
+.bi{
+    font-size: 2rem;
+}

@@ -5,6 +5,6 @@ from webapp.models import Client
 
 class IndexView(View):
     def get(self, request, *args, **kwargs):
-        return redirect('index')
+        return render(request, "general/index.html")
 
 

@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'webapp',
     'accounts',
-    'phonenumber_field'
+    'phonenumber_field',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
