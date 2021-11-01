@@ -1,9 +1,42 @@
 {% extends "base.html" %}
 
 {% block carousel %}
-    <img src="{{ car.avatar.url }}" class="d-block w-100"  alt="фото">
+    <img src="{{ car.avatar.url }}" class="d-block w-100 mb-5"  alt="фото">
 {% endblock %}
 
 {% block content %}
-
+    <div class="text-center my-5">
+        <h1>Арендовать автомобиль <br>
+            <small>{{ car.model }} {{ car.year|date:"Y" }}года</small>
+        </h1>
+    </div>
+    <div class="d-flex justify-content-between align-items-start my-5">
+        <div>
+            <h3>Характеристики:</h3>
+            <p>Модель: {{ car.model }}</p>
+            <p>Объём двигателя: {{ car.volume }}</p>
+            <p>Год: {{ car.year|date:"Y" }}</p>
+            <p>Вид топлива: {{ car.fuel }}</p>
+            <p>Платформа: {{ car.platform.name }}</p>
+        </div>
+        <div>
+            <h3>Размер платформы:</h3>
+            <p>Ширина: {{ car.platform.width }}см</p>
+            <p>Длинна: {{ car.platform.length }}см</p>
+            <p>Высота: {{ car.platform.height }}см</p>
+        </div>
+        <div>
+            <h3>Стоимость аренды:</h3>
+            {% if car.platform.name == "Цельнометаллическая" %}
+                <p>от 9000тг\сутки Без водителя</p>
+                <p>от 2500тг\час С водителем</p>
+            {% else %}
+                <p>от 12000тг\сутки Без водителя</p>
+                <p>от 3500тг\час С водителем<</p>
+            {% endif %}
+        </div>
+    </div>
+    {% for photo in car.photos.all %}
+        <img src="{{ photo.url }}" alt="avatar" width="100" class="my-5">
+    {% endfor %}
 {% endblock %}

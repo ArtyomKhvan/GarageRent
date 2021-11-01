@@ -9,11 +9,11 @@
         {% for car in cars%}
             <div class="car_list mt-3 ">
                 <div class="card" style="width: 18rem;">
-                  <img src="{{ car.avatar.url }}" class="card-img-top" alt="аватарка">
-                  <div class="card-body">
+                    <img src="{{ car.avatar.url }}" class="card-img-top" alt="аватарка">
+                    <div class="card-body">
                     <h5 class="card-title">{{ car.model }}</h5>
                     <p class="card-text">Платформа: {{ car.platform }}</p>
-                    <a href="#" class="btn btn-primary">Подробнее</a>
+                    <a href="{% url "webapp:car_detail" car.pk %}" class="btn btn-primary">Подробнее</a>
                   </div>
                 </div>
             </div>
