@@ -25,7 +25,7 @@ nav.navbar .dropdown:hover > .dropdown-menu {
   text-align: center;
 }
 .carousel {
-    height: 500px;
+    height: 800px;
 }
 .card{
     display: flex;
@@ -61,4 +61,8 @@ footer{
 }
 html{
      scroll-behavior: smooth;
+}
+.car_list{
+    margin: 50px 0;
+    width: 30%;
 }
