@@ -9,7 +9,7 @@
         {% for car in cars %}
             <div class="car_list mt-3 ">
                 <div class="card" style="width: 18rem;">
-                    <img src="{{ car.avatar.all.url }}" class="card-img-top" alt="аватарка">
+                    <img src="{{ car.photos.first.photo.url }}" class="card-img-top border border-2" width=200px height=280px alt="аватарка">
                     <div class="card-body">
                     <h5 class="card-title">{{ car.model }}</h5>
                     <p class="card-text">Платформа: {{ car.platform }}</p>
