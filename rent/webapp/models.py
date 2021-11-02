@@ -10,8 +10,6 @@ class Car(models.Model):
     fuel = models.CharField(max_length=30, blank=True, null=True, verbose_name="Топливо")
     platform = models.ForeignKey("webapp.Platform", on_delete=models.PROTECT, verbose_name="Платформа",
                                  related_name="cars")
-    avatar = models.ForeignKey("webapp.Photo", related_name='cars', blank=True, null=True, on_delete=models.PROTECT,
-                                verbose_name='Аватар')
 
     def __str__(self):
         return f"{self.model} - {self.fuel} - {self.platform}"

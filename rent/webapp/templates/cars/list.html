@@ -6,10 +6,10 @@
 
 {% block content %}
     <div class="d-flex flex-wrap justify-content-between mt-5">
-        {% for car in cars%}
+        {% for car in cars %}
             <div class="car_list mt-3 ">
                 <div class="card" style="width: 18rem;">
-                    <img src="{{ car.avatar.url }}" class="card-img-top" alt="аватарка">
+                    <img src="{{ car.avatar.all.url }}" class="card-img-top" alt="аватарка">
                     <div class="card-body">
                     <h5 class="card-title">{{ car.model }}</h5>
                     <p class="card-text">Платформа: {{ car.platform }}</p>
