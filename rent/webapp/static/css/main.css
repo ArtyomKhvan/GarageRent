@@ -69,3 +69,12 @@ html{
 .img_detail{
     margin-bottom: 100px;
 }
+.img_pic {
+    height: 300px;
+    width: 300px;
+    transition:width 0.5s ease;
+}
+#statya:hover img {
+    width:600px;
+    height: 600px;
+}
