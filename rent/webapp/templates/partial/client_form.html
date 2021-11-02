@@ -1,0 +1,12 @@
+{% load crispy_forms_filters %}
+<form action="{% url 'webapp:client' %}" method="post">
+    {% csrf_token %}
+    <div class="d-flex flex-column">
+        <input class="d-block input_comment" name="name" type="text" placeholder="Введите имя">
+        <input class="d-block input_comment" name="phone" type="tel" placeholder="Введите телефон">
+        <input class="d-block input_comment" name="email" type="email" placeholder="Введите емайл">
+        <input class="d-block input_comment" name="message" type="text" placeholder="Введите сообщение">
+        <p class="d-block my-5">* Отправляя форму, вы даете свое согласие на обработку <br> персональных данных</p>
+        <button  class="btn btn-outline-dark button_client" type="submit">Отправить</button>
+    </div>
+</form>

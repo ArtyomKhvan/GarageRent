@@ -1,5 +1,6 @@
 from django.views.generic import View, DetailView, CreateView, UpdateView, DeleteView, ListView
-from webapp.models import Car
+from webapp.models import Car, Client
+from django.urls import reverse
 
 
 class CarListView(ListView):
@@ -14,4 +15,7 @@ class CarDetailView(DetailView):
     template_name = "cars/detail.html"
     context_object_name = "car"
     pk_url_kwarg = "pk"
+
+
+
 
