@@ -11,6 +11,6 @@ urlpatterns = [
     path('contacts/', general_view.ContactView.as_view(), name="contacts"),
     path('cars/<int:pk>/review/create/', car_view.ReviewCreateView.as_view(), name="review_create"),
     path('cars/new/', car_view.CarCreateView.as_view(), name="car_create"),
-    path('cars/<int:pk>/delete/', car_view.CarDeleteView.as_view(), name="car_delete")
+    path('cars/<int:pk>/delete/', car_view.CarDeleteView.as_view(), name="car_delete"),
     path('car/<int:pk>/photo/new/', car_view.PhotoCreateView.as_view(), name="photo_create")
 ]

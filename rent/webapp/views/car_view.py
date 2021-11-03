@@ -72,14 +72,14 @@ class PhotoCreateView(CreateView):
         form.instance.car = self.get_object()
         return super().form_valid(form)
 
-    def get_form(self, form_class=None):
-        form = super().get_form()
-        form.helper.form_action = 'webapp:photo_create'
-        return form
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data()
+        context["pk"] = self.kwargs.get("pk")
+        return context
 
     def get_object(self, queryset=None):
         pk = self.kwargs.get("pk")
         return get_object_or_404(Car, pk=pk)
 
     def get_success_url(self):
-        return reverse('webapp:car_detail', kwargs={"pk": self.get_object().pk})
+        return reverse('webapp:car_detail', kwargs={"pk": self.object.car.pk})
