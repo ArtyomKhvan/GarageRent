@@ -46,7 +46,7 @@ class Review(models.Model):
 
 
 class Client(models.Model):
-    name = models.CharField(max_length=30, null=False, blank=False, verbose_name="Имя")
+    author = models.ForeignKey(get_user_model(), verbose_name='Автор', related_name='clients', on_delete=models.PROTECT)
     phone = PhoneNumberField(blank=True, verbose_name="Телефон")
     email = models.EmailField(null=True, blank=True, verbose_name="Почта")
     message = models.CharField(max_length=3000, null=False, blank=False, verbose_name="Сообщение")
