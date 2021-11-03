@@ -109,7 +109,7 @@ html{
     margin-left: 326px;
 }
 .login_block{
-    margin: 233px 0;
+    margin: 160px 0;
 }
 .input_review{
     width: 1100px;
@@ -125,4 +125,7 @@ html{
 }
 .card_index{
     margin: 150px 0;
+}
+.change_password{
+    margin: 130px 0;
 }

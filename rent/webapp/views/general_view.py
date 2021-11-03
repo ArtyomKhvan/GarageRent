@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.urls import reverse
-from django.views.generic import View, DetailView, CreateView, UpdateView, DeleteView, ListView
+from django.views.generic import View, CreateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from webapp.forms import ClientForm
 from webapp.models import Client
@@ -16,7 +17,7 @@ class AboutUsView(View):
         return render(request, "general/about_us.html")
 
 
-class ContactView(CreateView):
+class ContactView(LoginRequiredMixin, CreateView):
     model = Client
     template_name = 'general/contacts.html'
     form_class = ClientForm

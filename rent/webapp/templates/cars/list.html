@@ -5,9 +5,13 @@
 {% endblock %}
 
 {% block content %}
-    <div class="my-5 text-center">
-        <a href="{% url "webapp:car_create" %}" class="border border-radius-1 p-3 bg-secondary text-white">Добавить новое авто</a>
-    </div>
+    {% if perms.webapp.add_car %}
+        <div class="my-5 text-center">
+            <a href="{% url "webapp:car_create" %}" class="border border-radius-1 p-3 bg-secondary text-white">
+                Добавить новое авто
+            </a>
+        </div>
+    {% endif %}
     <div class="d-flex flex-wrap justify-content-between mt-5">
         {% for car in cars %}
             <div class="car_list mt-3 ">

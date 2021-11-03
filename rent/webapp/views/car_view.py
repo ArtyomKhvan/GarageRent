@@ -1,4 +1,4 @@
-from django.http import HttpResponseRedirect
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views.generic import DetailView, CreateView, DeleteView, ListView
@@ -21,7 +21,7 @@ class CarDetailView(DetailView):
     pk_url_kwarg = "pk"
 
 
-class ReviewCreateView(CreateView):
+class ReviewCreateView(LoginRequiredMixin, CreateView):
     model = Review
     template_name = 'partial/review_form.html'
     fields = ['text']
@@ -39,10 +39,11 @@ class ReviewCreateView(CreateView):
         return reverse('webapp:car_detail', kwargs={"pk": self.object.car.pk})
 
 
-class CarCreateView(CreateView):
+class CarCreateView(PermissionRequiredMixin, CreateView):
     model = Car
     form_class = CarForm
     template_name = "cars/create.html"
+    permission_required = "webapp.add_car"
 
     def get_form(self, form_class=None):
         form = super().get_form()
@@ -57,16 +58,18 @@ class CarCreateView(CreateView):
         return reverse('webapp:car_detail', kwargs={"pk": self.object.pk})
 
 
-class CarDeleteView(DeleteView):
+class CarDeleteView(PermissionRequiredMixin, DeleteView):
     model = Car
     template_name = "cars/delete.html"
     success_url = reverse_lazy("webapp:index")
+    permission_required = "webapp.delete_car"
 
 
-class PhotoCreateView(CreateView):
+class PhotoCreateView(PermissionRequiredMixin, CreateView):
     model = Photo
-    template_name = "partial/photo_form.html"
+    template_name = "cars/photo_form.html"
     form_class = PhotoForm
+    permission_required = "webapp.add_photo"
 
     def form_valid(self, form):
         form.instance.car = self.get_object()

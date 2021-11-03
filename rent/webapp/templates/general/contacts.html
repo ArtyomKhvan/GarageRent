@@ -33,7 +33,15 @@
         </div>
         <div class="d-flex flex-column">
             <h1 class="my-5">Отправка заявки:<hr></h1>
-            {% include "partial/client_form.html" %}
+            {% if user.is_authenticated %}
+                {% include "partial/client_form.html" %}
+            {% else %}
+                <h3>
+                    Для того чтобы оставить заявку, пожалуйста <br>
+                    <a href="{% url "accounts:register" %}">зарегистрируйтесь</a> или пройдите
+                    <a href="{% url "accounts:login" %}">логин</a>
+                </h3>
+            {% endif %}
         </div>
     </div>
     <div class="map-responsive mb-5">
