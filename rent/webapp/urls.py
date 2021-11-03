@@ -9,6 +9,5 @@ urlpatterns = [
     path('cars/', car_view.CarListView.as_view(), name="car_list"),
     path('cars/<int:pk>/', car_view.CarDetailView.as_view(), name="car_detail"),
     path('contacts/', general_view.ContactView.as_view(), name="contacts"),
-    path('client/', general_view.ClientCreateView.as_view(), name="client"),
     path('car/<int:pk>/review/create/', car_view.ReviewCreateView.as_view(), name="review_create")
 ]

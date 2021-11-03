@@ -15,4 +15,4 @@ class ClientForm(forms.ModelForm):
 
     class Meta:
         model = Client
-        exclude = ['created_at']
+        exclude = ['created_at', 'author']

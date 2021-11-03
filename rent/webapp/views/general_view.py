@@ -16,14 +16,9 @@ class AboutUsView(View):
         return render(request, "general/about_us.html")
 
 
-class ContactView(View):
-    def get(self, request, *args, **kwargs):
-        return render(request, "general/contacts.html")
-
-
-class ClientCreateView(CreateView):
+class ContactView(CreateView):
     model = Client
-    template_name = 'partial/client_form.html'
+    template_name = 'general/contacts.html'
     form_class = ClientForm
 
     def form_valid(self, form):
@@ -37,3 +32,5 @@ class ClientCreateView(CreateView):
 
     def get_success_url(self):
         return reverse('webapp:index')
+
+
