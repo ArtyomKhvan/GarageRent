@@ -36,15 +36,22 @@
                             Меню
                         </button>
                       </div>
-                      <a class="navbar-brand" href="{% url "webapp:index" %}">
+                      <a class="logo_link navbar-brand" href="{% url "webapp:index" %}">
                         <i class="fa fa-car fa-2x" aria-hidden="true"></i>
                         Garage Rent
                       </a>
+                    <div class="d-flex align-items-center justify-content-between login_container">
+                      {% if user.is_authenticated %}
+                          <a href="{% url "accounts:logout" %}">Logout</a>
+                      {% else %}
+                          <a href="{% url "accounts:login" %}">Login</a>
+                      {% endif %}
                       <p class="text-light">
                           +7 705 444 46 44 <br>
                           +7 708 600 76 36 <br>
                           com.garage19@gmail.com
                       </p>
+                    </div>
                   </div>
               </nav>
             </div>

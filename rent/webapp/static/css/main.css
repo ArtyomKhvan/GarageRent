@@ -101,3 +101,13 @@ html{
     width: 200px;
     height: 60px;
 }
+.login_container{
+    width: 300px;
+}
+.logo_link{
+    display: block;
+    margin-left: 216px;
+}
+.login_block{
+    margin: 233px 0;
+}
