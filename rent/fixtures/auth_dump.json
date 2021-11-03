@@ -1,5 +1,29 @@
 [
 {
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "admins",
+    "permissions": [
+      [
+        "add_car",
+        "webapp",
+        "car"
+      ],
+      [
+        "delete_car",
+        "webapp",
+        "car"
+      ],
+      [
+        "add_photo",
+        "webapp",
+        "photo"
+      ]
+    ]
+  }
+},
+{
   "model": "webapp.car",
   "pk": 1,
   "fields": {
@@ -219,17 +243,112 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$260000$UyCf8jy8BHe8Z2Rf7y3XxT$xuG7VC7IOD2BaaA2J0ZUo3vX5/LkaKCDca85E7Db0WY=",
-    "last_login": "2021-11-03T09:17:59Z",
+    "last_login": "2021-11-03T14:37:23.119Z",
     "is_superuser": true,
     "username": "admin",
-    "first_name": "",
-    "last_name": "",
-    "email": "",
+    "first_name": "admin",
+    "last_name": "admin",
+    "email": "admin@admin.com",
     "is_staff": true,
     "is_active": true,
     "date_joined": "2021-11-03T09:17:03Z",
     "groups": [],
     "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$HMPRESy0bTiaaTPlr77mSo$grzEhNIO1norvZMaICgXPQlgpTBtwGqimuUbeZuJr3E=",
+    "last_login": "2021-11-03T14:38:59.120Z",
+    "is_superuser": false,
+    "username": "Artyom",
+    "first_name": "Артем",
+    "last_name": "Хван",
+    "email": "hvanartem291@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-11-03T13:38:21.349Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$mIxXY3JhtifCcvHrmxmPET$56shFRmX3WRdW+esJtjObM/2uSBg0JWMWWrUK4oJIag=",
+    "last_login": "2021-11-03T14:38:41.517Z",
+    "is_superuser": false,
+    "username": "CarMixin",
+    "first_name": "Mixin",
+    "last_name": "Car",
+    "email": "Car@as.asd",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-11-03T14:26:01Z",
+    "groups": [
+      [
+        "admins"
+      ]
+    ],
+    "user_permissions": [
+      [
+        "add_car",
+        "webapp",
+        "car"
+      ],
+      [
+        "delete_car",
+        "webapp",
+        "car"
+      ],
+      [
+        "add_photo",
+        "webapp",
+        "photo"
+      ]
+    ]
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 1,
+  "fields": {
+    "car": 3,
+    "author": [
+      "admin"
+    ],
+    "text": "ТурбоПушка",
+    "created_at": "2021-11-03T10:28:23.209Z",
+    "update_at": "2021-11-03T10:28:23.209Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 2,
+  "fields": {
+    "car": 3,
+    "author": [
+      "Artyom"
+    ],
+    "text": "Хороший машин",
+    "created_at": "2021-11-03T13:47:04.351Z",
+    "update_at": "2021-11-03T13:47:04.351Z"
+  }
+},
+{
+  "model": "webapp.client",
+  "pk": 2,
+  "fields": {
+    "author": [
+      "admin"
+    ],
+    "phone": "+12125552368",
+    "email": "hvanartem291@gmail.com",
+    "message": "dsvrtvf34",
+    "created_at": "2021-11-03T13:00:36.760Z"
   }
 },
 {
@@ -240,6 +359,30 @@
       "admin"
     ],
     "about_me": "dsfv",
+    "avatar": "",
+    "birth": "2011-11-11"
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "Artyom"
+    ],
+    "about_me": "Клиент1",
+    "avatar": "user_pics/1586360148_youloveit_ru_bill_gravity_falls_na_avu11.jpg",
+    "birth": "2011-11-11"
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 3,
+  "fields": {
+    "user": [
+      "CarMixin"
+    ],
+    "about_me": null,
     "avatar": "",
     "birth": null
   }
