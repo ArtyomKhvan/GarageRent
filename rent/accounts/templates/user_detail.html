@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %}User {{ user_obj.username }}{% endblock %}
+{% block title %}{% endblock %}
 
 {% block content %}
-    <h1>{{ user_obj.username }}'s profile</h1>
+    <h1>Профиль {{ user_obj.username }}</h1>
     {% ifequal user user_obj %}
         <p>
             <a href="{% url "accounts:edit_profile" user_obj.pk %}">
-                Edit account
+                Редактировать профиль
             </a>
             <a href="{% url "accounts:change_password" user_obj.pk %}">
-                Change password
+                Поменять пароль
             </a>
         </p>
     {% endifequal %}
@@ -20,11 +20,19 @@
     {% else %}
         <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg" width="250">
     {% endif %}
-    <p>Username: {{ user_obj.username }}</p>
-    <p>First name: {{ user_obj.first_name }}</p>
-    <p>Last name: {{ user_obj.last_name }}</p>
-    <p>Date of birth: {{ user_obj.profile.birth_date }}</p>
+    <p>Логин: {{ user_obj.username }}</p>
+    <p>Фамилия: {{ user_obj.first_name }}</p>
+    <p>Имя: {{ user_obj.last_name }}</p>
+    <p>Дата рождения: {{ user_obj.profile.birth }}</p>
 
-    <h2>User's articles</h2>
-    {% include "partial/articles_list_full.html" with article_list=articles %}
+    <h2>Заявки пользователя</h2>
+    {% if is_paginated %}
+        {% include "partial/pagination.html" %}
+    {% endif %}
+    <div>
+    {% for client in user_obj.clients.all %}
+        <p>{{ client.message }}</p>
+        <p>{{ client.created_at }}</p>
+    {% endfor %}
+    </div>
 {% endblock %}
