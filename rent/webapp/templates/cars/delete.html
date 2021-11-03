@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content%}
+    <h1>Вы действительно хотите удалить {{ car.model }}?</h1>
+    <a href="{% url "webapp:index" %}">Отмена</a>
+    <form action="{% url "webapp:car_delete" car.pk %}" method="post">
+        {% csrf_token %}
+        <button>Да</button>
+    </form>
+{% endblock %}

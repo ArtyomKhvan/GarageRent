@@ -6,6 +6,7 @@
 
 {% block content %}
     <div class="d-flex flex-wrap justify-content-between mt-5">
+        <a href="{% url "webapp:car_create" %}">Добавить новое авто</a>
         {% for car in cars %}
             <div class="car_list mt-3 ">
                 <div class="card" style="width: 18rem;">
