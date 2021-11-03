@@ -111,3 +111,15 @@ html{
 .login_block{
     margin: 233px 0;
 }
+.input_review{
+    width: 1100px;
+}
+.datetime{
+    font-size: 12px;
+}
+.fw-3{
+    font-weight: bold;
+}
+.fw-3 small{
+    font-size: 18px;
+}
