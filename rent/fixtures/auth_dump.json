@@ -1,0 +1,247 @@
+[
+{
+  "model": "webapp.car",
+  "pk": 1,
+  "fields": {
+    "model": "Газель",
+    "volume": "2.90",
+    "year": "2005-10-25",
+    "fuel": "Бензин",
+    "platform": 2
+  }
+},
+{
+  "model": "webapp.car",
+  "pk": 2,
+  "fields": {
+    "model": "Газель",
+    "volume": "2.90",
+    "year": "2013-10-25",
+    "fuel": "Дизель",
+    "platform": 1
+  }
+},
+{
+  "model": "webapp.car",
+  "pk": 3,
+  "fields": {
+    "model": "Газель",
+    "volume": "2.90",
+    "year": "2011-10-25",
+    "fuel": "Дизель",
+    "platform": 1
+  }
+},
+{
+  "model": "webapp.car",
+  "pk": 4,
+  "fields": {
+    "model": "Газель",
+    "volume": "2.90",
+    "year": "2012-10-25",
+    "fuel": "Бензин",
+    "platform": 3
+  }
+},
+{
+  "model": "webapp.car",
+  "pk": 5,
+  "fields": {
+    "model": "Газель",
+    "volume": "3.50",
+    "year": "2012-10-25",
+    "fuel": "Бензин",
+    "platform": 4
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 1,
+  "fields": {
+    "photo": "photos/бп.jpg",
+    "car": 1
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 2,
+  "fields": {
+    "photo": "photos/бз.jpg",
+    "car": 1
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 3,
+  "fields": {
+    "photo": "photos/с.jpg",
+    "car": 1
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 4,
+  "fields": {
+    "photo": "photos/ф.п.jpg",
+    "car": 4
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 5,
+  "fields": {
+    "photo": "photos/фз.jpg",
+    "car": 4
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 6,
+  "fields": {
+    "photo": "photos/с1.jpg",
+    "car": 4
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 7,
+  "fields": {
+    "photo": "photos/цп.jpg",
+    "car": 2
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 8,
+  "fields": {
+    "photo": "photos/цз.jpg",
+    "car": 2
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 9,
+  "fields": {
+    "photo": "photos/с2.jpg",
+    "car": 2
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 10,
+  "fields": {
+    "photo": "photos/цп1.jpg",
+    "car": 3
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 11,
+  "fields": {
+    "photo": "photos/цз1.jpg",
+    "car": 3
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 12,
+  "fields": {
+    "photo": "photos/с3.jpg",
+    "car": 3
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 13,
+  "fields": {
+    "photo": "photos/эп.jpg",
+    "car": 5
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 14,
+  "fields": {
+    "photo": "photos/эз.jpg",
+    "car": 5
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 15,
+  "fields": {
+    "photo": "photos/с4.jpg",
+    "car": 5
+  }
+},
+{
+  "model": "webapp.platform",
+  "pk": 1,
+  "fields": {
+    "name": "Цельнометаллическая",
+    "length": 3100,
+    "width": 1900,
+    "height": 2200
+  }
+},
+{
+  "model": "webapp.platform",
+  "pk": 2,
+  "fields": {
+    "name": "Борт (удлиненный)",
+    "length": 4200,
+    "width": 2056,
+    "height": 1800
+  }
+},
+{
+  "model": "webapp.platform",
+  "pk": 3,
+  "fields": {
+    "name": "Еврофургон",
+    "length": 4200,
+    "width": 2100,
+    "height": 2250
+  }
+},
+{
+  "model": "webapp.platform",
+  "pk": 4,
+  "fields": {
+    "name": "Эвакуатор",
+    "length": 4500,
+    "width": 2200,
+    "height": 1500
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$UyCf8jy8BHe8Z2Rf7y3XxT$xuG7VC7IOD2BaaA2J0ZUo3vX5/LkaKCDca85E7Db0WY=",
+    "last_login": "2021-11-03T09:17:59Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-11-03T09:17:03Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "about_me": "dsfv",
+    "avatar": "",
+    "birth": null
+  }
+}
+]
