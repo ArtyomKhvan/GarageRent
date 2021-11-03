@@ -18,14 +18,13 @@
     {% if user_obj.profile.avatar %}
         <img src="{{ user_obj.profile.avatar.url }}" width="250">
     {% else %}
-        <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-
-        avatar-profile-vector-user-profile-profile-179376714.jpg" width="250">
+        <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg" width="250">
     {% endif %}
     <p>Username: {{ user_obj.username }}</p>
     <p>First name: {{ user_obj.first_name }}</p>
     <p>Last name: {{ user_obj.last_name }}</p>
-    <p>Sex: {{ user_obj.profile.sex }}</p>
+    <p>Date of birth: {{ user_obj.profile.birth_date }}</p>
 
-    <h2>User's posts</h2>
-    {% include "partial/.html" %}
+    <h2>User's articles</h2>
+    {% include "partial/articles_list_full.html" with article_list=articles %}
 {% endblock %}

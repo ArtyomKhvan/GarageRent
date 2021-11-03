@@ -1,0 +1,31 @@
+<div class="pagination">
+    <span class="step_links">
+        {% if page_obj.has_previous %}
+            <a href="?{% if query %}{{ query }}&{% endif %}page=1">To start</a>
+            <a href="?{% if query %}{{ query }}&{% endif %}page={{ page_obj.previous_page_number }}">
+                Back
+            </a>
+        {% endif %}
+
+        <form action="" method="get">
+            <label>
+                <input
+                        type="number"
+                        name="page"
+                        value="{{ page_obj.number }}"
+                >
+                of {{ page_obj.paginator.num_pages }}
+            </label>
+        </form>
+
+        {% if page_obj.has_next %}
+            <a href="?{% if query %}{{ query }}&{% endif %}page={{ page_obj.next_page_number }}">
+                Next
+            </a>
+        {% endif %}
+
+        <a href="?{% if query %}{{ query }}&{% endif %}page={{ page_obj.paginator.num_pages }}">
+            To end
+        </a>
+    </span>
+</div>
