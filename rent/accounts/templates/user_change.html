@@ -1,18 +1,20 @@
 {% extends "base.html" %}
 {% load crispy_forms_filters %}
 
-{% block title %}Edit {{ user_obj.username }}{% endblock %}
+{% block title %}{% endblock %}
 
 {% block content %}
-    <h1>Edit profile</h1>
-    <form
-            action="{% url "accounts:edit_profile" user_obj.pk %}"
-            method="post"
-            enctype="multipart/form-data"
-    >
-        {% csrf_token %}
-        {{ user_form|crispy }}
-        {{ profile_form|crispy }}
-        <button>Edit</button>
-    </form>
+    <div class="my-5 mx-auto">
+        <h1>Редактирование профиля</h1>
+        <form
+                action="{% url "accounts:edit_profile" user_obj.pk %}"
+                method="post"
+                enctype="multipart/form-data"
+        >
+            {% csrf_token %}
+            {{ user_form|crispy }}
+            {{ profile_form|crispy }}
+            <button class="btn btn-primary my-5">Редактировать</button>
+        </form>
+    </div>
 {% endblock %}

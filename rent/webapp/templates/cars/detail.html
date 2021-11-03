@@ -59,7 +59,10 @@
     <div>
         {% for review in car.reviews.all %}
             <div class="my-5">
-                <p class="fw-3">{{ review.author }}: <small>{{ review.text }}</small></p>
+                <p class="fw-3"><a href="{% url "accounts:profile" review.author.pk %}" class="text-dark">
+                    {{ review.author }}</a>:
+                    <small>{{ review.text }}</small>
+                </p>
                 <p class="datetime">Дата: {{ review.created_at }}</p>
                 <hr>
             </div>
