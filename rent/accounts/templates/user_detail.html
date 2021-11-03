@@ -3,36 +3,52 @@
 {% block title %}{% endblock %}
 
 {% block content %}
-    <h1>Профиль {{ user_obj.username }}</h1>
-    {% ifequal user user_obj %}
-        <p>
-            <a href="{% url "accounts:edit_profile" user_obj.pk %}">
-                Редактировать профиль
-            </a>
-            <a href="{% url "accounts:change_password" user_obj.pk %}">
-                Поменять пароль
-            </a>
-        </p>
-    {% endifequal %}
-
-    {% if user_obj.profile.avatar %}
-        <img src="{{ user_obj.profile.avatar.url }}" width="250">
-    {% else %}
-        <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg" width="250">
-    {% endif %}
-    <p>Логин: {{ user_obj.username }}</p>
-    <p>Фамилия: {{ user_obj.first_name }}</p>
-    <p>Имя: {{ user_obj.last_name }}</p>
-    <p>Дата рождения: {{ user_obj.profile.birth }}</p>
-
-    <h2>Заявки пользователя</h2>
-    {% if is_paginated %}
-        {% include "partial/pagination.html" %}
-    {% endif %}
-    <div>
-    {% for client in user_obj.clients.all %}
-        <p>{{ client.message }}</p>
-        <p>{{ client.created_at }}</p>
-    {% endfor %}
+    <div class="my-5 d-flex justify-content-between text-items-center">
+        <h1 class="w-50">Профиль {{ user_obj.username }}</h1>
+        <div class="w-50">
+            {% ifequal user user_obj %}
+                <p>
+                    <a href="{% url "accounts:edit_profile" user_obj.pk %}"
+                       class="border border-radius-1 p-3 bg-secondary text-white">
+                        Редактировать профиль
+                    </a>
+                    <a href="{% url "accounts:change_password" user_obj.pk %}"
+                       class="border border-radius-1 p-3 bg-secondary text-white">
+                        Поменять пароль
+                    </a>
+                </p>
+            {% endifequal %}
+        </div>
+    </div>
+    <div class="d-flex justify-content-between">
+        <div class="w-50">
+            {% if user_obj.profile.avatar %}
+                <img src="{{ user_obj.profile.avatar.url }}" width="250">
+            {% else %}
+                <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg" width="250">
+            {% endif %}
+        </div>
+        <div class="my-5 w-50">
+            <p>Логин: {{ user_obj.username }}</p>
+            <p>Фамилия: {{ user_obj.first_name }}</p>
+            <p>Имя: {{ user_obj.last_name }}</p>
+            <p>Дата рождения: {{ user_obj.profile.birth }}</p>
+        </div>
+    </div>
+        <div class="my-5">
+        <h2 class="my-5">Заявки пользователя</h2>
+        <hr>
+        {% if is_paginated %}
+            {% include "partial/pagination.html" %}
+        {% endif %}
+        <div>
+            {% for client in user_obj.clients.all %}
+                <p>Заявка: {{ client.message }}</p>
+                <p>{{ client.created_at }}</p>
+            {% endfor %}
+        </div>
+        {% if is_paginated %}
+            {% include "partial/pagination.html" %}
+        {% endif %}
     </div>
 {% endblock %}
