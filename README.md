@@ -112,10 +112,10 @@ View Страница “Отзывы клиентов”
 Порядок действий при запуске проекта:
 
     1 virtualenv venv
-    2 pip install -r requirements.txt
-    3 . venv/bin/activate
+    2 . venv/bin/activate
+    3 pip install -r requirements.txt
     4 python manage.py migrate
     5 python manage.py loaddata fixtures/auth_dump.json
-
+    6 python manage.py runserver
 **
 
