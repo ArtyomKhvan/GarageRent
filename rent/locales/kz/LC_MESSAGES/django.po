@@ -1,0 +1,537 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-02 11:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: accounts/templates/change_password.html:5
+#: accounts/templates/user_detail.html:18
+msgid "ChangePassword"
+msgstr "Құпия сөзді өзгерту"
+
+#: accounts/templates/change_password.html:9
+msgid "Change password for "
+msgstr "Құпия сөзді өзгерту"
+
+#: accounts/templates/change_password.html:13
+msgid "Change"
+msgstr "Құпия"
+
+#: accounts/templates/registration/login.html:4
+#: accounts/templates/registration/login.html:8
+#: accounts/templates/registration/login.html:17
+#: webapp/templates/general/contacts.html:43
+msgid "Login"
+msgstr "өзгерту"
+
+#: accounts/templates/registration/login.html:12
+msgid "Не верный пароль или логин"
+msgstr "Қате пароль немесе логин"
+
+#: accounts/templates/registration/register.html:5
+msgid "Register"
+msgstr "Қазір тіркеліңіз"
+
+#: accounts/templates/registration/register.html:12
+msgid "Зарегистрироваться"
+msgstr "Қазір тіркеліңіз"
+
+#: accounts/templates/user_change.html:9 accounts/templates/user_detail.html:14
+msgid "ChangeProfile"
+msgstr "Қазір тіркеліңіз"
+
+#: accounts/templates/user_change.html:18
+msgid "ChangeBtn"
+msgstr "Қазір"
+
+#: accounts/templates/user_detail.html:8
+msgid "Profile"
+msgstr "Қазір "
+
+#: accounts/templates/user_detail.html:33
+msgid "Username"
+msgstr "Қазір"
+
+#: accounts/templates/user_detail.html:34
+msgid "Firstname"
+msgstr "Қазір"
+
+#: accounts/templates/user_detail.html:35
+msgid "Lastname"
+msgstr "Тіркеліңіз"
+
+#: accounts/templates/user_detail.html:36
+msgid "Birth"
+msgstr "тіркеліңіз"
+
+#: accounts/templates/user_detail.html:40
+msgid "Заявки пользователя"
+msgstr "Қазір тіркеліңіз"
+
+#: accounts/templates/user_detail.html:47
+msgid "Заявка"
+msgstr "Қазір"
+
+#: rent/settings.py:128
+msgid "English"
+msgstr "Английский"
+
+#: rent/settings.py:129
+msgid "Russian"
+msgstr "Русский"
+
+#: rent/settings.py:130
+msgid "Kazakh"
+msgstr "Казахский"
+
+#: webapp/models.py:8 webapp/models.py:29 webapp/models.py:39
+#: webapp/templates/cars/detail.html:17
+msgid "Model"
+msgstr "Қазір"
+
+#: webapp/models.py:9 webapp/templates/cars/detail.html:18
+msgid "Vol"
+msgstr "Көлемі"
+
+#: webapp/models.py:11 webapp/templates/cars/detail.html:20
+msgid "Fuel"
+msgstr "Көлеміы"
+
+#: webapp/models.py:12 webapp/templates/cars/detail.html:21
+#: webapp/templates/cars/detail.html:24 webapp/templates/cars/list.html:23
+msgid "Platform"
+msgstr "Көлемі"
+
+#: webapp/models.py:20 webapp/templates/cars/detail.html:43
+msgid "Photo"
+msgstr "Көлемі"
+
+#: webapp/models.py:21
+msgid "Car"
+msgstr "Көлемі2"
+
+#: webapp/models.py:30 webapp/templates/cars/detail.html:26
+msgid "LongPla"
+msgstr "ұзын"
+
+#: webapp/models.py:31 webapp/templates/cars/detail.html:25
+msgid "WidthPla"
+msgstr "ені"
+
+#: webapp/models.py:32 webapp/templates/cars/detail.html:27
+msgid "HeightPla"
+msgstr "Биіктігі"
+
+#: webapp/models.py:40 webapp/models.py:50
+msgid "Author"
+msgstr "Автор"
+
+#: webapp/models.py:41
+msgid "Review"
+msgstr "Қарау"
+
+#: webapp/models.py:51
+msgid "Phone"
+msgstr "Телефон"
+
+#: webapp/models.py:52
+msgid "Email"
+msgstr "Пошта"
+
+#: webapp/models.py:53
+msgid "Message"
+msgstr "Хабар"
+
+#: webapp/templates/base.html:16
+msgid "titleCarRent"
+msgstr "Көлікті жалға алу"
+
+#: webapp/templates/base.html:24
+msgid "aboutCompanyMenu"
+msgstr "Компания туралы"
+
+#: webapp/templates/base.html:25
+msgid "OurServiceMenu"
+msgstr "Біздің қызметтеріміз"
+
+#: webapp/templates/base.html:26
+msgid "CarParkMenu"
+msgstr "Автотұрақ"
+
+#: webapp/templates/base.html:27
+msgid "ContactsMenu"
+msgstr "Контактілер"
+
+#: webapp/templates/base.html:38
+msgid "MenuBtn"
+msgstr "Мәзір"
+
+#: webapp/templates/base.html:63
+msgid "Hello"
+msgstr "Салем"
+
+#: webapp/templates/base.html:66
+msgid "Logout"
+msgstr "Шығу"
+
+#: webapp/templates/base.html:69
+msgid "login"
+msgstr "Кіру үшін"
+
+#: webapp/templates/base.html:70 webapp/templates/general/contacts.html:42
+msgid "SignUp"
+msgstr "Тіркеу"
+
+#: webapp/templates/cars/create.html:6
+msgid "AddCar"
+msgstr "Косу"
+
+#: webapp/templates/cars/create.html:10
+#: webapp/templates/cars/photo_form.html:10
+msgid "AddBtn"
+msgstr "қосу"
+
+#: webapp/templates/cars/delete.html:5
+msgid "Вы действительно хотите удалить "
+msgstr "Сіз шынымен жойғыңыз келе ме?"
+
+#: webapp/templates/cars/delete.html:6
+msgid "CancelLink"
+msgstr "Бас тарту"
+
+#: webapp/templates/cars/delete.html:9
+msgid "YesBtn"
+msgstr "Иә"
+
+#: webapp/templates/cars/detail.html:10
+msgid "Арендовать автомобиль "
+msgstr "Көлік жалдау"
+
+#: webapp/templates/cars/detail.html:11
+msgid "year"
+msgstr "жыл"
+
+#: webapp/templates/cars/detail.html:16
+msgid "ParamCarTitle"
+msgstr "Көліктің сипаттамалары"
+
+#: webapp/templates/cars/detail.html:19
+msgid "Year"
+msgstr "Жыл"
+
+#: webapp/templates/cars/detail.html:30
+msgid "Price"
+msgstr "Бағасы"
+
+#: webapp/templates/cars/detail.html:32 webapp/templates/cars/detail.html:35
+msgid "NoDriver"
+msgstr "Жүргізушісіз"
+
+#: webapp/templates/cars/detail.html:33 webapp/templates/cars/detail.html:36
+msgid "WithDriver"
+msgstr "Жүргізушімен"
+
+#: webapp/templates/cars/detail.html:48
+msgid "DeleteLink"
+msgstr "Жою"
+
+#: webapp/templates/cars/list.html:12
+msgid "AddNewCar"
+msgstr "Жаңа көлік қосыңыз"
+
+#: webapp/templates/cars/list.html:25
+msgid "DetailLink"
+msgstr "Егжей-тегжейлі"
+
+#: webapp/templates/cars/photo_form.html:6
+msgid "AddPhotoTitle"
+msgstr "Фото қосыңыз"
+
+#: webapp/templates/general/about_us.html:12
+msgid ""
+"Молодая и динамично развивающаяся компания «Garage Rent» берет начало в 2019 "
+"году в г. Алмата. "
+msgstr "«Жас және серпінді дамып келе жатқан Garage Rent компаниясы 2019 жылы басталады»"
+"«Алматыдағы жыл»."
+
+#: webapp/templates/general/about_us.html:13
+msgid ""
+"С самого своего основания Garage Rent выбрала оптимизацию оказания "
+"транспортных и организационных услуг как\n"
+"            основополагающий принцип работы. Ведь ни для кого не секрет, что "
+"простота Услуги и легкость в использовании\n"
+"            определяет ее востребованность!"
+msgstr ""
+"Garage Rent компаниясы құрылған күннен бастап жеткізуді оңтайландыруды таңдады"
+"көлік және ұйымдастырушылық қызметтер\n"
+"Еңбектің негізгі қағидасы. Өйткені, бұл ешкімге құпия емес."
+"қызметтің қарапайымдылығы және пайдаланудың қарапайымдылығы\n"
+"өзектілігін анықтайды!"
+
+#: webapp/templates/general/about_us.html:16
+msgid ""
+"Вождение автомобиля требует высоких затрат концентрации и энергии, которую "
+"Вы можете пустить в более нужное русло,\n"
+"            арендовав автомобиль с водителем и тем самым, доверившись "
+"профессионалам. Именно это говорит о статусе\n"
+"            успешного человека — умение ценить свое время и энергию!"
+msgstr ""
+"Garage Rent компаниясы құрылған күннен бастап жеткізуді оңтайландыруды таңдады"
+"көлік және ұйымдастырушылық қызметтер\n"
+"Еңбектің негізгі қағидасы. Өйткені, бұл ешкімге құпия емес."
+"қызметтің қарапайымдылығы және пайдаланудың қарапайымдылығы\n"
+"өзектілігін анықтайды!"
+
+#: webapp/templates/general/about_us.html:21
+msgid " Наше кредо: Довольный клиент — долгосрочный партнер!"
+msgstr ""
+
+#: webapp/templates/general/about_us.html:22
+msgid ""
+"Мы не стремимся к краткосрочным отношениям – мы создаем Партнерство и "
+"качественные услуги, учитывая все пожелания и\n"
+"            замечания от наших клиентов! Именно благодаря этому мы "
+"развиваемся и делаем совместное сотрудничество легким и приятным!"
+msgstr ""
+"Garage Rent компаниясы құрылған күннен бастап жеткізуді оңтайландыруды таңдады"
+"көлік және ұйымдастырушылық қызметтер\n"
+"Еңбектің негізгі қағидасы. Өйткені, бұл ешкімге құпия емес."
+"қызметтің қарапайымдылығы және пайдаланудың қарапайымдылығы\n"
+"өзектілігін анықтайды!"
+
+#: webapp/templates/general/about_us.html:24
+msgid ""
+"На сегодняшний день нам доверяют как Государственные структуры и "
+"министерства Республики Казахстан, Национальные\n"
+"            компании и Акционерные общества так и частные лица. За короткий "
+"промежуток времени в городе Алмата, с участием нашей компании были\n"
+"            проведены ряд мероприятий международного и республиканского "
+"масштаба, что еще раз говорит о статусе Алматы как имидже Независимого "
+"Казахстана!"
+msgstr ""
+"Garage Rent компаниясы құрылған күннен бастап жеткізуді оңтайландыруды таңдады"
+"көлік және ұйымдастырушылық қызметтер\n"
+"Еңбектің негізгі қағидасы. Өйткені, бұл ешкімге құпия емес."
+"қызметтің қарапайымдылығы және пайдаланудың қарапайымдылығы\n"
+"өзектілігін анықтайды!"
+
+#: webapp/templates/general/about_us.html:29
+msgid ""
+"Квалификация и профессионализм водителей постоянно совершенствуются в части "
+"обслуживания и сервиса, а навыки вождения остаются всегда\n"
+"            на неизменно высоком уровне."
+msgstr ""
+"Garage Rent компаниясы құрылған күннен бастап жеткізуді оңтайландыруды таңдады"
+"көлік және ұйымдастырушылық қызметтер\n"
+"Еңбектің негізгі қағидасы. Өйткені, бұл ешкімге құпия емес."
+"қызметтің қарапайымдылығы және пайдаланудың қарапайымдылығы\n"
+"өзектілігін анықтайды!"
+
+#: webapp/templates/general/about_us.html:31
+msgid "Мы всегда открыты новым решениям и готовы к диалогу!"
+msgstr "Біз әрқашан жаңа шешімдерге ашықпыз және диалогқа дайынбыз!"
+
+#: webapp/templates/general/contacts.html:13
+msgid "legalAdress"
+msgstr "Заңды мекен-жайы"
+
+#: webapp/templates/general/contacts.html:14
+msgid "KZ"
+msgstr "Казахстан"
+
+#: webapp/templates/general/contacts.html:15
+msgid "г. Нур-Султан, ул. А. Жубанова 23/1, 302"
+msgstr "г. Нур-Султан, ул. А. Жубанова 23/1, 302"
+
+#: webapp/templates/general/contacts.html:18
+msgid "Фактический/почтовый"
+msgstr "Нақты / пошталық"
+
+#: webapp/templates/general/contacts.html:19
+msgid "Республика Казахстан, Z05P6G9"
+msgstr "Республика Казахстан, Z05P6G9"
+
+#: webapp/templates/general/contacts.html:20
+msgid "г. Нур-Султан, р-н Есиль"
+msgstr "г. Нур-Султан, р-н Есиль"
+
+#: webapp/templates/general/contacts.html:21
+msgid "пр. Қабанбай Батыр, д. 60/15, 3"
+msgstr "пр. Қабанбай Батыр, д. 60/15, 3"
+
+#: webapp/templates/general/contacts.html:25
+msgid "Phones"
+msgstr "Телефон"
+
+#: webapp/templates/general/contacts.html:36
+msgid "Отправка заявки"
+msgstr "Өтінім жіберу"
+
+#: webapp/templates/general/contacts.html:41
+msgid "Для того чтобы оставить заявку, пожалуйста"
+msgstr "Өтініш қалдыру үшін"
+
+#: webapp/templates/general/contacts.html:42
+msgid "илиПройдите"
+msgstr "немесе барыңыз"
+
+#: webapp/templates/general/index.html:24
+msgid "OurService"
+msgstr "немесе барыңыз"
+
+#: webapp/templates/general/index.html:26
+msgid ""
+"\n"
+"                Сервис аренды автомобилей делится на 4 направления услуг. "
+"<br>\n"
+"                Кликните на раздел и получите подробную информацию.\n"
+"                "
+msgstr ""
+"\n"
+"               Автокөлікті жалға беру қызметі 4 қызмет көрсету аймағына бөлінген. "
+"<br>\n"
+"                Бөлімді басып, толық ақпарат алыңыз.\n"
+"                "
+
+#: webapp/templates/general/index.html:37
+msgid "Аренда без водителя"
+msgstr "Бөлімді басып, "
+
+#: webapp/templates/general/index.html:38
+msgid "От 9000тг/сутки"
+msgstr "Тәулігіне 9000тг"
+
+#: webapp/templates/general/index.html:45
+msgid "Аренда с водителем "
+msgstr "Жүргізушімен жалға алу"
+
+#: webapp/templates/general/index.html:46
+msgid "От 2500тг/час"
+msgstr "Тәулігіне 2500"
+
+#: webapp/templates/general/index.html:55
+msgid "Межгородские услуги "
+msgstr "Қалааралық қызметтер"
+
+#: webapp/templates/general/index.html:56
+msgid "От 12000тг/сутки"
+msgstr "Тәулігіне 12000"
+
+#: webapp/templates/general/index.html:63
+msgid "Услуги эвакуатора"
+msgstr "Қалааралық қызметтер"
+
+#: webapp/templates/general/index.html:64
+msgid "От 10000тг/выезд"
+msgstr "10000тг / жөнелтуден"
+
+#: webapp/templates/partial/advantages.html:3
+msgid "Perfect"
+msgstr "Артықшылықтары"
+
+#: webapp/templates/partial/advantages.html:5
+msgid ""
+"Наш опыт и репутация – самые важные показатели, но есть еще несколько важных "
+"условий"
+msgstr ""
+"Біздің тәжірибеміз бен беделіміз – ең маңызды көрсеткіштер, бірақ одан да маңыздылары бар"
+"шарттар"
+
+#: webapp/templates/partial/advantages.html:9
+msgid "Собственный автопарк"
+msgstr ""
+"Біздің тәжірибеміз бен беделіміз – ең маңызды көрсеткіштер, бірақ одан да маңыздылары бар"
+"шарттар"
+
+#: webapp/templates/partial/advantages.html:10
+msgid "В моменты пиковых нагрузок, очень важно иметь резервные варианты"
+msgstr ""
+"Біздің тәжірибеміз бен беделіміз – ең маңызды көрсеткіштер, бірақ одан да маңыздылары бар"
+"шарттар"
+
+#: webapp/templates/partial/advantages.html:12
+msgid "Квалифицированный персонал"
+msgstr "Білікті қызметкерлер"
+
+
+#: webapp/templates/partial/advantages.html:13
+msgid "Слаженная работа механиков, персональных менеджеров"
+msgstr "Механизаторлардың, жеке басшылардың жақсы үйлестірілген жұмысы"
+
+#: webapp/templates/partial/advantages.html:14
+msgid "бухгалтеров и юристов – залог высокого сервиса обслуживания"
+msgstr "Механизаторлардың, жеке басшылардың жақсы үйлестірілген жұмысы"
+
+#: webapp/templates/partial/advantages.html:15
+msgid ""
+"Персональный менеджер учтет все Ваши пожелания и проследит за работой команды"
+msgstr "Механизаторлардың, жеке басшылардың жақсы үйлестірілген жұмысы"
+
+#: webapp/templates/partial/advantages.html:17
+msgid "Система мониторинга транспорта "
+msgstr "Көлік құралдарын бақылау жүйесі"
+
+#: webapp/templates/partial/advantages.html:18
+msgid "Современное оборудование GPS-навигации позволяет эффективно "
+msgstr "Заманауи GPS навигациялық жабдық тиімді мүмкіндік береді"
+
+#: webapp/templates/partial/advantages.html:19
+msgid "и своевременно отслеживать транспорт на пути его следования"
+msgstr "және оның бағыты бойынша көлікті уақтылы қадағалау "
+
+#: webapp/templates/partial/advantages.html:21
+msgid " Полная документальная и юридическая безопасность"
+msgstr "және оның бағыты бойынша көлікті уақтылы қадағалау "
+
+#: webapp/templates/partial/advantages.html:22
+msgid "Мы предоставляем полный пакет документов"
+msgstr "Біз құжаттардың толық пакетін береміз"
+
+#: webapp/templates/partial/advantages.html:23
+msgid "заключаем договора согласно Законодательству Республики Казахстан"
+msgstr "Қазақстан Республикасының заңнамасына сәйкес шарттар жасаймыз"
+
+#: webapp/templates/partial/advantages.html:24
+msgid "прозрачно и понятно ведем сделку с нашими клиентами"
+msgstr "біз өз клиенттерімізбен транзакцияны ашық және анық жүргіземіз"
+
+#: webapp/templates/partial/advantages.html:26
+msgid " Полностью оснащенная материально-техническая база СТО "
+msgstr "ТҚС толық жабдықталған материалдық-техникалық базасы"
+
+#: webapp/templates/partial/advantages.html:27
+msgid "Все автомобили проходят постоянный контроль на авторизованном СТО"
+msgstr "ТҚС толық жабдықталған материалдық-техникалық базасы"
+
+#: webapp/templates/partial/advantages.html:28
+msgid "имеются 3 СТО и охраняемая база"
+msgstr "ТҚС толық жабдықталған материалдық-техникалық базасы"
+
+#: webapp/templates/partial/client_form.html:7
+msgid " Отправляя форму, вы даете свое согласие на обработку "
+msgstr "ТҚС толық жабдықталған материалдық-техникалық базасы"
+
+#: webapp/templates/partial/client_form.html:7
+msgid " персональных данных"
+msgstr "жеке деректер"
+
+#: webapp/templates/partial/client_form.html:8
+msgid "sendBtn"
+msgstr "жіберу"
+
+#: webapp/templates/partial/review_form.html:7
+msgid "CommentBtn"
+msgstr "Қарау"

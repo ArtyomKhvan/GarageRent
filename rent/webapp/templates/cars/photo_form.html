@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% load crispy_forms_filters %}
+{% load i18n %}
 
 {% block content %}
-    <h1>Добавить фото</h1>
+    <h1>{% trans "AddPhotoTitle" %}</h1>
     <form action="{% url "webapp:photo_create" pk %}" method="post">
         {% csrf_token %}
         {{ form|crispy }}
-        <button>Добавить</button>
+        <button>{% trans "AddBtn" %}</button>
     </form>
 {% endblock %}

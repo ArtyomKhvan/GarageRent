@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block carousel %}
     <img src="https://грузотакси-газелька70.рф/wp-content/uploads/2020/11/4f08.jpg" class="d-block w-100"  alt="фото">
@@ -8,7 +9,7 @@
     {% if perms.webapp.add_car %}
         <div class="my-5 text-center">
             <a href="{% url "webapp:car_create" %}" class="border border-radius-1 p-3 bg-secondary text-white">
-                Добавить новое авто
+                {% trans "AddNewCar" %}
             </a>
         </div>
     {% endif %}
@@ -19,9 +20,9 @@
                     <img src="{{ car.photos.first.photo.url }}" class="card-img-top border border-2" width=200px height=280px alt="аватарка">
                     <div class="card-body">
                     <h5 class="card-title">{{ car.model }}</h5>
-                    <p class="card-text">Платформа: {{ car.platform }}</p>
+                    <p class="card-text">{% trans "Platform" %}: {{ car.platform }}</p>
                     <a href="{% url "webapp:car_detail" car.pk %}" class="border border-radius-5
-                    p-2 bg-info text-white">Подробнее</a>
+                    p-2 bg-info text-white">{% trans "DetailLink" %}</a>
                   </div>
                 </div>
             </div>

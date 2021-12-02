@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block carousel %}
      <img src="https://грузотакси-газелька70.рф/wp-content/uploads/2020/11/4f08.jpg" class="d-block w-100"  alt="...">
@@ -9,19 +10,19 @@
         <div class="d-flex flex-column">
             <h1 class="my-5">ИП Garage Rent<hr></h1>
             <div>
-                <p>Юридический адрес:</p>
-                <p>Республика Казахстан, 010000,</p>
-                <p>г. Нур-Султан, ул. А. Жубанова 23/1, 302</p>
+                <p>{% trans "legalAdress" %}:</p>
+                <p>{% trans "KZ" %}, 010000,</p>
+                <p>{% blocktrans %}г. Нур-Султан, ул. А. Жубанова 23/1, 302{% endblocktrans %}</p>
             </div>
             <div class="my-5">
-                <p>Фактический/почтовый:</p>
-                <p>Республика Казахстан, Z05P6G9,</p>
-                <p>г. Нур-Султан, р-н Есиль,</p>
-                <p>пр. Қабанбай Батыр, д. 60/15, 3</p>
+                <p>{% blocktrans %}Фактический/почтовый{% endblocktrans %}:</p>
+                <p>{% blocktrans %}Республика Казахстан, Z05P6G9{% endblocktrans %},</p>
+                <p>{% blocktrans %}г. Нур-Султан, р-н Есиль{% endblocktrans %},</p>
+                <p>{% blocktrans %}пр. Қабанбай Батыр, д. 60/15, 3{% endblocktrans %}</p>
                 <hr>
             </div>
             <div>
-                <p>Телефоны:</p>
+                <p>{% trans "Phones" %}:</p>
                 <p>+7 7172 911 888</p>
                 <p>+7 702 109 1473</p>
                 <p>+7 777 133 0747</p>
@@ -32,14 +33,14 @@
             </div>
         </div>
         <div class="d-flex flex-column">
-            <h1 class="my-5">Отправка заявки:<hr></h1>
+            <h1 class="my-5">{% blocktrans %}Отправка заявки{% endblocktrans %}:<hr></h1>
             {% if user.is_authenticated %}
                 {% include "partial/client_form.html" %}
             {% else %}
                 <h3>
-                    Для того чтобы оставить заявку, пожалуйста <br>
-                    <a href="{% url "accounts:register" %}">зарегистрируйтесь</a> или пройдите
-                    <a href="{% url "accounts:login" %}">логин</a>
+                    {% blocktrans %}Для того чтобы оставить заявку, пожалуйста{% endblocktrans %} <br>
+                    <a href="{% url "accounts:register" %}">{% trans "SignUp" %}</a> {% trans "илиПройдите" %}
+                    <a href="{% url "accounts:login" %}">{% trans "Login" %}</a>
                 </h3>
             {% endif %}
         </div>

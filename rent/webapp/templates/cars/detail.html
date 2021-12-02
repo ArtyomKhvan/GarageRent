@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block carousel %}
     <img src="{{ car.photos.first.photo.url }}" class="d-block img_detail w-100" height=700px  alt="фото">
@@ -6,45 +7,45 @@
 
 {% block content %}
     <div class="text-center">
-        <h1>Арендовать автомобиль <br>
-            <small>{{ car.model }} {{ car.year|date:"Y" }}года</small>
+        <h1>{% blocktrans %}Арендовать автомобиль {% endblocktrans %}<br>
+            <small>{{ car.model }} {{ car.year|date:"Y" }}{% trans "year"%}</small>
         </h1>
     </div>
     <div class="d-flex justify-content-between align-items-start my-5">
         <div>
-            <h3>Характеристики:</h3>
-            <p>Модель: {{ car.model }}</p>
-            <p>Объём двигателя: {{ car.volume }}</p>
-            <p>Год: {{ car.year|date:"Y" }}</p>
-            <p>Вид топлива: {{ car.fuel }}</p>
-            <p>Платформа: {{ car.platform.name }}</p>
+            <h3>{% trans "ParamCarTitle" %}:</h3>
+            <p>{% trans "Model" %}: {{ car.model }}</p>
+            <p>{% trans "Vol" %}: {{ car.volume }}</p>
+            <p>{% trans "Year" %}: {{ car.year|date:"Y" }}</p>
+            <p>{% trans "Fuel" %}: {{ car.fuel }}</p>
+            <p>{% trans "Platform" %}: {{ car.platform.name }}</p>
         </div>
         <div>
-            <h3>Размер платформы:</h3>
-            <p>Ширина: {{ car.platform.width }}см</p>
-            <p>Длинна: {{ car.platform.length }}см</p>
-            <p>Высота: {{ car.platform.height }}см</p>
+            <h3>{% trans "Platform" %}:</h3>
+            <p>{% trans "WidthPla" %}: {{ car.platform.width }}</p>
+            <p>{% trans "LongPla" %}: {{ car.platform.length }}</p>
+            <p>{% trans "HeightPla" %}: {{ car.platform.height }}</p>
         </div>
         <div>
-            <h3>Стоимость аренды:</h3>
+            <h3>{% trans "Price" %}:</h3>
             {% if car.platform.name == "Цельнометаллическая" %}
-                <p>от 9000тг\сутки Без водителя</p>
-                <p>от 2500тг\час С водителем</p>
+                <p>от 9000тг\сутки {% trans "NoDriver" %}</p>
+                <p>от 2500тг\час {% trans "WithDriver" %}</p>
             {% else %}
-                <p>от 12000тг\сутки Без водителя</p>
-                <p>от 3500тг\час С водителем<</p>
+                <p>от 12000тг\сутки {% trans "NoDriver" %}</p>
+                <p>от 3500тг\час {% trans "WithDriver" %}<</p>
             {% endif %}
         </div>
     </div>
         <div class="d-flex justify-content-between w-25">
             {% if perms.webapp.add_photo %}
                 <a href="{% url "webapp:photo_create" car.pk %}" class="border border-radius-1 p-3 bg-secondary text-white">
-                    Добавить фото
+                    {% trans "Photo" %}
                 </a>
             {% endif %}
             {% if perms.webapp.delete_car %}
                 <a href="{% url "webapp:car_delete" car.pk %}" class="border border-radius-1 p-3 bg-secondary text-white">
-                    Удалить Авто
+                     {% trans "DeleteLink" %}
                 </a>
             {% endif %}
         </div>

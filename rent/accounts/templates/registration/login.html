@@ -1,19 +1,20 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Вход{% endblock %}
+{% block title %}{% trans "Login" %}{% endblock %}
 
 {% block content %}
     <div class="login_block">
-        <h1 class="my-5">Вход</h1>
+        <h1 class="my-5">{% trans "Login" %}</h1>
         <form action="{% url "accounts:login" %}" method="post">
             {% csrf_token %}
             {% if has_error %}
-                <p>Не верный пароль или логин</p>
+                <p>{% blocktrans %}Не верный пароль или логин{% endblocktrans %}</p>
             {% endif %}
             <p><input type="text" name="username" placeholder="Логин"></p>
-            <p><input type="password" name="password" placeholder="Пароль"></p>
+            <p><input type="password" name="password" placeholder="Пароль\"></p>
             <input type="hidden" name="next" value="{{ request.GET.next }}">
-            <button class="btn btn-primary my-5">Войти</button>
+            <button class="btn btn-primary my-5">{% trans "Login" %}</button>
         </form>
     </div>
 {% endblock %}

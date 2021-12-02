@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block content%}
-    <h1>Вы действительно хотите удалить {{ car.model }}?</h1>
-    <a href="{% url "webapp:index" %}">Отмена</a>
+    <h1>{% blocktrans %}Вы действительно хотите удалить {% endblocktrans %} {{ car.model }}?</h1>
+    <a href="{% url "webapp:index" %}">{% trans "CancelLink" %}</a>
     <form action="{% url "webapp:car_delete" car.pk %}" method="post">
         {% csrf_token %}
-        <button>Да</button>
+        <button>{% trans "YesBtn" %}</button>
     </form>
 {% endblock %}

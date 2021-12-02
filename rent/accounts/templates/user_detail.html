@@ -1,20 +1,21 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block title %}{% endblock %}
 
 {% block content %}
     <div class="my-5 d-flex justify-content-between text-items-center">
-        <h1 class="w-50">Профиль {{ user_obj.username }}</h1>
+        <h1 class="w-50">{% trans "Profile" %} {{ user_obj.username }}</h1>
         <div class="w-50">
             {% ifequal user user_obj %}
                 <p>
                     <a href="{% url "accounts:edit_profile" user_obj.pk %}"
                        class="border border-radius-1 p-3 bg-secondary text-white">
-                        Редактировать профиль
+                         {% trans "ChangeProfile" %}
                     </a>
                     <a href="{% url "accounts:change_password" user_obj.pk %}"
                        class="border border-radius-1 p-3 bg-secondary text-white">
-                        Поменять пароль
+                         {% trans "ChangePassword" %}
                     </a>
                 </p>
             {% endifequal %}
@@ -29,21 +30,21 @@
             {% endif %}
         </div>
         <div class="my-5 w-50">
-            <p>Логин: {{ user_obj.username }}</p>
-            <p>Фамилия: {{ user_obj.first_name }}</p>
-            <p>Имя: {{ user_obj.last_name }}</p>
-            <p>Дата рождения: {{ user_obj.profile.birth }}</p>
+            <p>{% trans "Username" %}: {{ user_obj.username }}</p>
+            <p>{% trans "Firstname" %}: {{ user_obj.first_name }}</p>
+            <p>{% trans "Lastname" %}: {{ user_obj.last_name }}</p>
+            <p>{% trans "Birth" %}: {{ user_obj.profile.birth }}</p>
         </div>
     </div>
         <div class="my-5">
-        <h2 class="my-5">Заявки пользователя</h2>
+        <h2 class="my-5">{% blocktrans %}Заявки пользователя{% endblocktrans %}</h2>
         <hr>
         {% if is_paginated %}
             {% include "partial/pagination.html" %}
         {% endif %}
         <div>
             {% for client in user_obj.clients.all %}
-                <p>Заявка: {{ client.message }}</p>
+                <p>{% trans "Заявка" %}: {{ client.message }}</p>
                 <p>{{ client.created_at }}</p>
             {% endfor %}
         </div>
