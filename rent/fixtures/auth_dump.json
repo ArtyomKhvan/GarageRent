@@ -27,10 +27,16 @@
   "model": "webapp.car",
   "pk": 1,
   "fields": {
-    "model": "Газель",
+    "model": "Gazelle",
+    "model_en": "Gazelle",
+    "model_ru": "Газель",
+    "model_kz": "Газэль",
     "volume": "2.90",
     "year": "2005-10-25",
-    "fuel": "Бензин",
+    "fuel": "Benzin",
+    "fuel_en": "Benzin",
+    "fuel_ru": "Бензин",
+    "fuel_kz": "Бензын",
     "platform": 2
   }
 },
@@ -38,10 +44,16 @@
   "model": "webapp.car",
   "pk": 2,
   "fields": {
-    "model": "Газель",
+    "model": "Gazelle",
+    "model_en": "Gazelle",
+    "model_ru": "Газель",
+    "model_kz": "Газэль",
     "volume": "2.90",
     "year": "2013-10-25",
-    "fuel": "Дизель",
+    "fuel": "Benzin",
+    "fuel_en": "Benzin",
+    "fuel_ru": "Бензин",
+    "fuel_kz": "Бензын",
     "platform": 1
   }
 },
@@ -49,10 +61,16 @@
   "model": "webapp.car",
   "pk": 3,
   "fields": {
-    "model": "Газель",
+    "model": "Gazelle",
+    "model_en": "Gazelle",
+    "model_ru": "Газель",
+    "model_kz": "Газэль",
     "volume": "2.90",
     "year": "2011-10-25",
-    "fuel": "Дизель",
+    "fuel": "Benzin",
+    "fuel_en": "Benzin",
+    "fuel_ru": "Бензин",
+    "fuel_kz": "Бензын",
     "platform": 1
   }
 },
@@ -60,10 +78,16 @@
   "model": "webapp.car",
   "pk": 4,
   "fields": {
-    "model": "Газель",
+    "model": "Gazelle",
+    "model_en": "Gazelle",
+    "model_ru": "Газель",
+    "model_kz": "Газэль",
     "volume": "2.90",
     "year": "2012-10-25",
-    "fuel": "Бензин",
+    "fuel": "Benzin",
+    "fuel_en": "Benzin",
+    "fuel_ru": "Бензин",
+    "fuel_kz": "Бензын",
     "platform": 3
   }
 },
@@ -71,10 +95,16 @@
   "model": "webapp.car",
   "pk": 5,
   "fields": {
-    "model": "Газель",
+    "model": "Gazelle",
+    "model_en": "Gazelle",
+    "model_ru": "Газель",
+    "model_kz": "Газэль",
     "volume": "3.50",
     "year": "2012-10-25",
-    "fuel": "Бензин",
+    "fuel": "Benzin",
+    "fuel_en": "Benzin",
+    "fuel_ru": "Бензин",
+    "fuel_kz": "Бензын",
     "platform": 4
   }
 },
@@ -243,7 +273,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$260000$UyCf8jy8BHe8Z2Rf7y3XxT$xuG7VC7IOD2BaaA2J0ZUo3vX5/LkaKCDca85E7Db0WY=",
-    "last_login": "2021-11-03T14:37:23.119Z",
+    "last_login": "2021-12-02T11:04:36.910Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "admin",
@@ -348,7 +378,7 @@
     "phone": "+12125552368",
     "email": "hvanartem291@gmail.com",
     "message": "dsvrtvf34",
-    "created_at": "2021-11-03T13:00:36.760Z"
+    "created_at": "2021-12-02T12:31:00.005Z"
   }
 },
 {
